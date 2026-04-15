@@ -112,8 +112,7 @@ const length = firstName.length;
 const firstInitial = firstName[0];
 const lastInitial = firstName[firstName.length - 1];
 const capitalize = firstName.toUpperCase();
-const weirdInitials = firstName.at(-1).toUpperCase() +
-    lastName.at(-1).toUpperCase();
+const weirdInitials = firstName.at(-1).toUpperCase() + lastName.at(-1).toUpperCase();
 
 // Don't forget your console.logs!
 
