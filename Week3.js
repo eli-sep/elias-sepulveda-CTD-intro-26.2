@@ -30,22 +30,21 @@
 let prop;
 prop = "species";
 const myPet = {
-    name : "Violet",
-    species : "dog",
-    color: "Brown & Black",
-    "eye color" : "Brown",
+    name: "Violet",
+    species: "dog",
+    color: ["brown", "black"],
+    "eye color": "brown",
 }
 
 console.log("Q1 object: ", myPet);
 console.log("Q1 name: ", myPet.name);
 console.log("Q1 species: ", myPet.species);
-console.log("Q1 color: ", myPet.color);
+console.log("Q1 color:  " + myPet.color[0] + " & " + myPet.color[1]);
 
-//Examples of accessing the properties of an object using dot notation, bracket notation, and a variable to access the property name. Note that when a property name has a space in it, the propery needs to be defined with quotes and accessed with bracket notation. Also, when using a variable to access a property, you need to use bracket notation and the variable should not be in quotes.
+console.log("Q1 dot notation:", myPet.name)
+console.log("Q1 bracket notation with string:", myPet["eye color"])
+console.log("Q1 bracket notation with variable:", myPet[prop])
 
-console.log(myPet.name)
-console.log(myPet["eye color"])
-console.log("Prop", myPet[prop])
 
 // ---------- QUESTION 2 ---------
 // Now let's see how we can modify the properties. Modify the 'name' property of the 'myPet' object. This name should be different than the value used in Question 1 (e.g. Henry ). Use your console.log's to print the myPet console. Verify the 'name' property is different than the value in Question 1.
@@ -58,6 +57,7 @@ console.log("Prop", myPet[prop])
 // PUT YOUR CODE HERE
 
 myPet.name = "Mila";
+myPet.color = "parti color"
 console.log("Q2 updated object", myPet);
 
 // ---------- QUESTION 3 ---------
@@ -75,12 +75,8 @@ console.log("Q2 updated object", myPet);
 
 // PUT YOUR CODE HERE
 
-
-// Write a for...in loop that iterates through each property in the myPet object
-// Q4: propertyName: propertyValue
-
-for (let key in myPet){
-    console.log("Q3: "+ key + ":", myPet[key])
+for (let key in myPet) {
+    console.log("Q3: " + key + ":", myPet[key])
 }
 
 // ---------- QUESTION 4 ----------
@@ -99,6 +95,17 @@ for (let key in myPet){
 
 // PUT YOUR CODE HERE
 
+myPet.describe = function () {
+    return `${myPet.name} is a ${myPet.color} ${myPet.species}.`
+}
+
+console.log("Q4:", myPet.describe());
+
+myPet.describeStretch = function () {
+    return `${this.name} is a ${this.color} ${this.species}.`
+}
+
+console.log("Q4 Stretch:", myPet.describeStretch());
 
 //---------- QUESTION 5 ----------
 //Using myPet, remove the property color. Verify the deletion by checking whether the myPet object still has a property named color. It returns true if the property exists and false otherwise
@@ -108,6 +115,8 @@ for (let key in myPet){
 // EXAMPLE OUTPUT:
 //Q5 Color property deleted: true
 
+delete myPet.color
+console.log("Q5", "Color property deleted:", !myPet.hasOwnProperty('color'));
 
 //---------- QUESTION 6 ----------
 //Create a variable named pets and assign it an array containing three pet objects. Each object should include three properties: name, species, and color with appropriate values. Then, define a function called printPets that uses the forEach method to loop through the array and log each pet’s details to the console. Note: console.log is called within the function
@@ -130,6 +139,30 @@ for (let key in myPet){
 
 // PUT YOUR CODE HERE
 
+const pets = [
+    {
+        name: "Violet",
+        species: "dog",
+        color: ["brown", "black"]
+    },
+    {
+        name: "Bailey",
+        species: "dog",
+        color: "golden brown"
+    },
+    {
+        name: "Jazz",
+        species: "cat",
+        color: ["black", "white"],
+    }
+]
+
+function printPets(array) {
+    console.log("Q6:")
+    array.forEach(function (element) { return console.log(element) })
+}
+
+printPets(pets)
 
 //---------- QUESTION 7 ----------
 //Write a JavaScript constructor function named Dog that defines a blueprint for creating Dog objects. Each Dog object should include the following properties: name, breed, and age. Using this constructor, create two distinct Dog instances with different values for each property. Finally, use console.log() to display both Dog instances in the console.
@@ -148,6 +181,18 @@ for (let key in myPet){
 //Q7: Dog { name: 'Destiny', breed: 'shepherd', age: 14 }
 
 // PUT YOUR CODE HERE
+
+function Dog(name, breed, age) {
+    this.name = name
+    this.breed = breed
+    this.age = age
+}
+
+let dog1 = new Dog("Leo", "terrier", 8);
+let dog2 = new Dog("Mimi", "teacup chiuaua", 9);
+
+console.log("Q7", dog1);
+console.log("Q7", dog2);
 
 //---------- QUESTION 8 ----------
 //Write a function that compares two Dog instances objects and checks if they have the same keys and values. Write a function called areObjectsEqual(obj1, obj2) that returns true if both objects have the same keys and values, and false otherwise. 
@@ -171,6 +216,36 @@ for (let key in myPet){
 
 // PUT YOUR CODE HERE
 
+let dog3 = structuredClone(dog1)
+let dog4 = structuredClone(dog1)
+dog4.sex = "female"
+
+function areObjectsEqual(obj1, obj2) {
+    let obj1Keys = Object.keys(obj1);  //returns keys as arrays
+    let obj2Keys = Object.keys(obj2);  //returns keys as arrays
+    let keysSame = obj1Keys.toString() === obj2Keys.toString()
+    if (!keysSame) {
+        return false
+    } else {
+        for (let key in obj1) {
+            if (obj1[key] !== obj2[key]) {
+                return false;
+            }
+        }
+        return true
+    }
+}
+
+console.log("Q8: Are objects equal? - different values:", areObjectsEqual(dog1, dog2));
+
+console.log("Q8: Are objects equal? - same key and values:", areObjectsEqual(dog1, dog3));
+
+console.log("Q8: Are objects equal? - different keys:", areObjectsEqual(dog1, dog4));
+
+// keys
+//   console.log(key);  // name, age, isAdmin
+// values for the keys
+
 //---------- QUESTION 9 ----------
 //Learn how to use the built-in Date object in JavaScript to retrieve and display the current date. See https://www.w3schools.com/js/js\_dates.asp as a reference. Create a variable called currentDate. Assign it the value of a new Date() object.
 
@@ -181,6 +256,7 @@ for (let key in myPet){
 //Q9: Current Date: 2025-09-13T23:47:23.858Z 
 
 // PUT YOUR CODE HERE
+
 
 
 //---------- QUESTION 10 ----------
