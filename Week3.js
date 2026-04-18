@@ -257,7 +257,8 @@ console.log("Q8: Are objects equal? - different keys:", areObjectsEqual(dog1, do
 
 // PUT YOUR CODE HERE
 
-
+const currentDate = new Date()
+console.log("Q9: Current Date:", currentDate);
 
 //---------- QUESTION 10 ----------
 //Use JavaScript's Date object to retrieve specific parts of the current date. Using the currentDate from Question 9, write three separate lines of code to extract:
@@ -278,3 +279,11 @@ console.log("Q8: Are objects equal? - different keys:", areObjectsEqual(dog1, do
 //Q10 Day: 13
 
 // PUT YOUR CODE HERE
+
+let year = currentDate.getFullYear();
+let month = currentDate.getMonth();
+let day = currentDate.getDate();
+
+console.log("Q10 Year:", year);
+console.log("Q10 Month:", month);
+console.log("Q10 Day:", day);
