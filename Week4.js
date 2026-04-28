@@ -15,11 +15,14 @@
 // PUT YOUR CODE HERE
 
 function convertTemp(cTemp) {
-    return (`Q1 convertTemp: ${cTemp}°C = ${cTemp * 9 / 5 + 32}°F`);
+    return cTemp * 9 / 5 + 32
 }
 
-console.log(convertTemp(0));
-console.log(convertTemp(100));
+let celsiusTemp = 0
+console.log("Q1 convertTemp: ", celsiusTemp, convertTemp(celsiusTemp));
+
+celsiusTemp = 100
+console.log("Q1 convertTemp: ", celsiusTemp, convertTemp(celsiusTemp));
 
 
 // function convertTemp (cTemp){
@@ -71,12 +74,12 @@ console.log("Q2 reverseString: ", inputString, reverseString(inputString));
 // PUT YOUR CODE HERE
 
 function tipCalculator(billTotal, tipPercentage) {
-    return billTotal + " " + tipPercentage + " " + billTotal * (tipPercentage + 1)
+	let totalBillAmount = billTotal * (tipPercentage + 1)
+    return [billTotal, tipPercentage, totalBillAmount] 
 }
 
-console.log("Q3 tipCalculator: ", tipCalculator(20, .20));
-
-console.log("Q3 tipCalculator: ", tipCalculator(50, .20));
+console.log("Q3 tipCalculator: ", ...tipCalculator(20, .20));
+console.log("Q3 tipCalculator: ", ...tipCalculator(50, .20));
 
 // Don't forget your console.logs!
 
@@ -208,7 +211,7 @@ function calculateAverage(arr) {
     let sum = 0;
     let validNumbers = 0;
     if (arr.length === 0) {
-        return `This is an empty array.`
+        return 0
     }
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] <= 100 && arr[i] >= 0) {
@@ -217,7 +220,7 @@ function calculateAverage(arr) {
         }
     }
     if (validNumbers === 0) {
-        return `Invalid inputs.`
+        return 0
     }
     let average = sum / validNumbers;
     return average;
@@ -296,9 +299,9 @@ function passed(letterGrade) {
 console.log("Q10 passed('A'): ", passed('A'));
 console.log("Q10 passed('B'): ", passed('B'));
 console.log("Q10 passed('C'): ", passed('C'));
-console.log("Q10 falled('D'): ", passed('D'));
-console.log("Q10 failed('F'): ", passed('F'));
-console.log("Q10 failed('E'): ", passed('E'));
+console.log("Q10 passed('D'): ", passed('D'));
+console.log("Q10 passed('F'): ", passed('F'));
+console.log("Q10 passed('E'): ", passed('E'));
 
 // ---------- QUESTION 11 ----------
 // Create a function named printClassResult (className, student, scores) that utilizes all three functions to output information on a student.
