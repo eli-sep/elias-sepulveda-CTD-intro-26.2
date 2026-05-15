@@ -1,0 +1,136 @@
+/*
+
+    + In your index.html file, add a navigational header to your webpage using the <nav> element.
+    + Add two sections to your index.html file:
+    + The first section will be "Skills". Use an h2 tag as you did with your    
+        About, Experience, and Connect sections, and be sure to include the id 
+        property in the element. You can leave the section empty for now. In    
+        later weeks we'll use JavaScript to insert a list of your skills.
+    + The second section will be "Projects". Use an h2 tag as you did with your 
+        About, Experience, and Connect sections, and be sure to include the id 
+        property in the element. You need to add an empty <ul> element in this 
+        section; you will be adding your GitHub Projects via API call to this 
+        empty section using JavaScript later in this course.
+    + The navigation menu should include a link to each of your sections (i.e. 
+        "About", "Experience", "Skills", "Projects", "Connect")
+    + STRETCH GOAL (Optional) Make the header sticky/fixed on the page using code in your index.css file.
+    In your index.css file, change the layout of your "Experience" section using rows and columns so items are displayed in a better layout rather than a list Hint: use Flexbox - we suggest have job titles to the left, dates worked that job to the right and brief description of the job below the title.
+ Also in your index.css file, update the "Connect" section to use Flexbox to improve the layout of your social media icons or links
+
+  */
+
+body {
+  margin: 0;
+  background-color: rgb(151, 226, 255);
+  font-family: "Nunito", sans-serif;
+  color: rgb(2, 112, 149);
+  /* border: 10px rgb(255, 213, 0) solid; */
+}
+
+header {
+  background-color: rgb(251, 251, 251);
+  padding: 10px 0 0;
+  position: sticky;
+  top: 0px;
+}
+
+nav{
+  padding: 15px;
+  background-color: rgb(58, 114, 245);
+}
+
+nav ul {
+  margin: 0 auto;
+  width: 800px;
+  padding: 0px;
+  text-align: center;
+}
+
+nav li {
+  margin: auto 5px;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 24px;
+  background-color: rgb(17, 2, 180);
+  padding: 5px 15px;
+  border: 4px rgb(246, 192, 56) outset;
+}
+
+a {
+  text-decoration: none;
+  color:rgb(255, 213, 0);
+}
+/* nav a:hover {
+  text-decoration: underline;
+} */
+
+/* nav a:active {
+  text-decoration: underline;
+} */
+
+/* nav a:focus {
+  text-decoration: underline;
+} */
+
+/* nav a:visited {
+  text-decoration: underline;
+} */
+
+/* nav a:link {
+  text-decoration: underline;
+} */
+
+/* nav a {
+
+} */
+
+p {
+  color: white;
+}
+
+h1 {
+  width: 375px;
+  font-family: "Original Surfer", sans-serif;
+  font-size: 48px;
+  text-align: center;
+  margin: 30px auto;
+  padding: 5px 0;
+  border: 5px rgb(255, 213, 0) solid;
+}
+
+section {
+  margin: 30px 0;
+}
+
+#About {
+  text-align: center;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 550;
+  color: rgb(226, 67, 39);
+}
+
+#Experience {
+  margin: 30px auto;
+  padding: 40px 30px;
+  background-color: whitesmoke;
+}
+
+li {
+  margin: 30px;
+}
+
+#Connect li {
+  list-style: none;
+  display: inline;
+}
+
+.fa-square-linkedin {
+  color: rgb(0, 122, 98);
+}
+
+.fa-github {
+  color: rgb(0, 122, 98);
+}
