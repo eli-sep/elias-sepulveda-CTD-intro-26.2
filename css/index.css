@@ -21,24 +21,37 @@ nav {
 
 nav ul {
   margin: 0 auto;
-  width: 800px;
   padding: 0px;
-  text-align: center;
+  /* text-align: center; */
+  justify-content: center;
+  display: flex;
 }
 
 nav li {
   margin: auto 5px;
-  display: inline-block;
+  /* display: inline-block; */
   font-weight: 700;
   font-size: 24px;
   background-color: rgb(17, 2, 180);
+  /* padding: 5px 15px; */
+}
+
+nav a {
+  display: block;
+  margin: 0px;
   padding: 5px 15px;
+  text-decoration: none;
+  color: rgb(255, 213, 0);
   border: 4px rgb(246, 192, 56) outset;
 }
 
+nav a:hover {
+  border-style: inset;
+}
+
 a {
+  margin: 5px 15px;
   text-decoration: none;
-  color: rgb(255, 213, 0);
 }
 
 p {
@@ -57,7 +70,8 @@ h1 {
 
 section {
   margin: 0px auto;
-  padding: 40px 11.5%
+  padding: 40px 11.5%;
+  scroll-margin-top: 221px;
 }
 
 #About {
@@ -105,6 +119,7 @@ h3 {
 
 li {
   margin: 0 15px;
+  list-style: none;
 }
 
 #Connect {
