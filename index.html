@@ -4,32 +4,103 @@
     <title>Elias Sepulveda's Portfolio</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Original+Surfer&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/index.css" />
+    <!-- Link to Fontawesome for icons. -->
+    <script src="https://kit.fontawesome.com/bf3e66da18.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <h1>Elias Sepulveda</h1>
-
+    <header>
+      <h1>Elias Sepulveda</h1>
+      <nav>
+        <ul>
+          <li><a href="#About">About</a></li>
+          <li><a href="#Skills">Skills</a></li>
+          <li><a href="#Experience">Experience</a></li>
+          <li><a href="#Projects">Projects</a></li>
+          <li><a href="#Connect">Connect</a></li>
+        </ul>
+      </nav>
+    </header>
     <section id="About">
       <h2>About</h2>
       <p>This is a paragraph about me. It contains words that describe me and the different skills and qualifications that I have obtained.</p>
     </section>
 
+    <section id="Skills">
+      <h2>Skills</h2>
+    </section>
+
+    <!-- <ul>
+      <li>Proficient in I.T. and computer networking</li>
+      <li>Advanced electrical knowledge</li>
+      <li>Expert abilities in building automation and control system design and engineering</li>
+      <li>Superb troubleshooting skills in areas of electrical systems, IT networking, instrumentation devices, and program sequence verification</li>
+      <li>Codecademy: p5.js course - completed</li>
+      <li>Code the dream - Intro to Programming - in progress</li>
+    </ul>
+     -->
+
     <section id="Experience">
       <h2>Experience</h2>
-      <ul>
-        <li>Proficient in I.T. and computer networking</li>
-        <li>Advanced electrical knowledge</li>
-        <li>Expert abilities in building automation and control system design and engineering</li>
-        <li>Superb troubleshooting skills in areas of electrical systems, IT networking, instrumentation devices, and program sequence verification</li>
-        <li>Codecademy: p5.js course - completed</li>
-        <li>Code the dream - Intro to Programming - in progress</li>
-      </ul>
+      <div class="experience-item">
+        <div class="experience-header">
+          <h3>Johnson Controls - Control Systems Engineer</h3>
+          <h3 class="experience-date">October 2024 - Present (2 yrs.)</h3>
+        </div>
+        <p class="experience-description">
+          Designed, configured, programmed, and supported building automation and HVAC control systems using Johnson Controls software and hardware platforms. Collaborated with engineers, contractors,
+          and clients to develop control logic, system documentation, network configurations, and commissioning activities for commercial facilities.
+        </p>
+      </div>
+      <div class="experience-item">
+        <div class="experience-header">
+          <h3>LPC Automation Inc. - Design Engineer</h3>
+          <h3 class="experience-date">June 2017 - October 2024 (7 yrs.)</h3>
+        </div>
+        <p class="experience-description">
+          Designed and implemented building automation and control systems for HVAC, lighting, and security applications. Developed control logic, created system schematics and submittals, configured
+          controllers and networks, and supported commissioning and troubleshooting for commercial projects.
+        </p>
+      </div>
+      <div class="experience-item">
+        <div class="experience-header">
+          <h3>RSD - Total Control - CAD Technician / Programmer</h3>
+          <h3 class="experience-date">December 2016 - June 2017 (6 mo.)</h3>
+        </div>
+        <p class="experience-description">
+          Created CAD drawings, panel layouts, and automation system documentation for HVAC control projects. Assisted with controller programming, panel assembly, system testing, and user interface
+          development to support project implementation and commissioning.
+        </p>
+      </div>
+      <div class="experience-item">
+        <div class="experience-header">
+          <h3>Food Maxx - Grocery Clerk</h3>
+          <h3 class="experience-date">September 2005 - December 2016 (11 yrs.)</h3>
+        </div>
+        <p class="experience-description">
+          Started in courtesy clerk duties including cart retrieval, floor cleaning, go-backs, and customer assistance. Later trained as a cashier and member of the day crew, helping replenish sale
+          items, assist with checkout operations, and organize grocery shipments for the night stocking team.
+        </p>
+      </div>
+    </section>
+
+    <section id="Projects">
+      <h2>Projects</h2>
+      <ul></ul>
     </section>
 
     <section id="Connect">
       <h2>Connect</h2>
-      <ul>
-        <li><a href="https://www.linkedin.com/in/elias-sepulveda-34aa0b29b">LinkedIn</a></li>
-        <li><a href="https://github.com/eli-sep">GitHub</a></li>
+      <ul class="socials">
+        <li>
+          <a href="https://www.linkedin.com/in/elias-sepulveda-34aa0b29b" aria-label="LinkedIn"><i class="fa-brands fa-square-linkedin fa-3x"></i></a>
+        </li>
+        <li>
+          <a href="https://github.com/eli-sep" aria-label="GitHub"><i class="fa-brands fa-github fa-3x"></i></a>
+        </li>
       </ul>
     </section>
   </body>

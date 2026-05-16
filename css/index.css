@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  background-color: rgb(151, 226, 255);
+  font-family: "Nunito", sans-serif;
+  color: rgb(2, 112, 149);
+  /* border: 10px rgb(255, 213, 0) solid; */
+}
+
+header {
+  background-color: rgb(251, 251, 251);
+  padding: 0 0;
+  position: sticky;
+  top: 0px;
+  overflow: auto;
+}
+
+nav {
+  padding: 15px;
+  background-color: rgb(58, 114, 245);
+}
+
+nav ul {
+  margin: 0 auto;
+  padding: 0px;
+  /* text-align: center; */
+  justify-content: center;
+  display: flex;
+}
+
+nav li {
+  margin: auto 5px;
+  /* display: inline-block; */
+  font-weight: 700;
+  font-size: 24px;
+  background-color: rgb(17, 2, 180);
+  /* padding: 5px 15px; */
+}
+
+nav a {
+  display: block;
+  margin: 0px;
+  padding: 5px 15px;
+  text-decoration: none;
+  color: rgb(255, 213, 0);
+  border: 4px rgb(246, 192, 56) outset;
+}
+
+nav a:hover {
+  border-style: inset;
+}
+
+a {
+  margin: 5px 15px;
+  text-decoration: none;
+}
+
+p {
+  color: white;
+}
+
+h1 {
+  width: 375px;
+  font-family: "Original Surfer", sans-serif;
+  font-size: 48px;
+  text-align: center;
+  margin: 30px auto;
+  padding: 5px 0;
+  border: 5px rgb(255, 213, 0) solid;
+}
+
+section {
+  margin: 0px auto;
+  padding: 40px 11.5%;
+  scroll-margin-top: 221px;
+}
+
+#About {
+  text-align: center;
+  background-color: #59c3c3;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 550;
+  color: rgb(226, 67, 39);
+  margin-top: 0;
+}
+
+h3 {
+  width: 400px;
+}
+
+#Experience {
+  background-color: whitesmoke;
+}
+
+.experience-item {
+  display: flex;
+  color: rgb(2, 112, 149);
+  flex-direction: column;
+}
+
+.experience-date {
+  color: rgb(2, 112, 149);
+  text-align: right;
+  width: 400px;
+}
+
+.experience-description {
+  color: rgb(2, 112, 149);
+  width: 40%;
+}
+
+.experience-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+li {
+  margin: 0 15px;
+  list-style: none;
+}
+
+#Connect {
+  margin: 0 auto;
+  text-align: center;
+  background-color: #daffed;
+}
+
+.socials {
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.fa-square-linkedin {
+  color: rgb(0, 122, 98);
+}
+
+.fa-github {
+  color: rgb(0, 122, 98);
+}
