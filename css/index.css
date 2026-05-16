@@ -57,7 +57,7 @@ h1 {
 
 section {
   margin: 0px auto;
-  padding: 40px 40px;
+  padding: 40px 11.5%
 }
 
 #About {
@@ -83,12 +83,13 @@ h3 {
 .experience-item {
   display: flex;
   color: rgb(2, 112, 149);
+  flex-direction: column;
 }
 
 .experience-date {
   color: rgb(2, 112, 149);
-  /* margin-right: 10%; */
   text-align: right;
+  width: 400px;
 }
 
 .experience-description {
@@ -126,9 +127,4 @@ li {
 
 .fa-github {
   color: rgb(0, 122, 98);
-}
-
-.experience-item {
-  display: flex;
-  flex-direction: column;
 }
