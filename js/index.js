@@ -1,11 +1,16 @@
-/*  In your index.js file, using DOM manipulation, add a 'footer' child element to your index.html. Be careful on this step, as different DOM methods (append, appendChild, lastChild, etc.) have different placements.
-Remember that you can store the elements in variables to reference the variables and call methods on them to more easily follow your code. (It's easier to read body.innerHTML than it is to read document.getElementsByTagName("body").innerHTML) */
-
+const today = new Date();
+const thisYear = today.getFullYear();
+const copyright = document.createElement("p");
 const footer = document.createElement("footer");
-// footer.innerText = "This is a footer.";
+
+copyright.innerHTML = `\u00A9 Elias Sepulveda ${thisYear}`;
 
 const body = document.body;
 
 body.append(footer);
+footer.appendChild(copyright);
+copyright.style.textAlign = "center"; // center copyright
 
-console.log(footer, body);
+console.log(today);
+console.log(thisYear);
+console.log(copyright);
