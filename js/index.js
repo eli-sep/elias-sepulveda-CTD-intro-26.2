@@ -1,7 +1,9 @@
 const today = new Date();
 const thisYear = today.getFullYear();
 const copyright = document.createElement("p");
-const footer = document.createElement("footer");
+const body = document.body;
+
+body.append(document.createElement("footer"));
 
 const skills = [
   "Proficient in I.T. and computer networking",
@@ -31,15 +33,13 @@ const skillsList = skillSection.querySelector("ul");
 
 copyright.innerHTML = `\u00A9 Elias Sepulveda ${thisYear}`;
 
-const body = document.body;
-
 for (let i = 0; i < skills.length; i++) {
   const skill = document.createElement("li");
   skill.innerText = skills[i];
   skillsList.appendChild(skill);
 }
+const footer = document.querySelector("footer");
 
-body.append(footer);
 footer.appendChild(copyright);
 copyright.style.textAlign = "center"; // center copyright
 
@@ -48,4 +48,3 @@ console.log(thisYear);
 console.log(copyright.textContent);
 console.log(skillSection);
 console.log(skillsList);
-
