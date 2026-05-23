@@ -18,13 +18,13 @@ const skills = [
   "I.T Support",
   "Computer Networking",
   "Electrical Control Systems",
-  "Instrumentation", 
+  "Instrumentation",
   "Electrical Troubleshooting",
   "Electrical Theory",
 ];
 
-const skillSection = document.querySelector("#skills");
-const skillsList = skillSection.querySelector("ul");
+const skillsSection = document.querySelector("#skills");
+const skillsList = skillsSection.querySelector("ul");
 
 copyright.innerHTML = `\u00A9 Elias Sepulveda ${thisYear}`;
 
@@ -41,5 +41,5 @@ copyright.style.textAlign = "center"; // center copyright
 console.log(today);
 console.log(thisYear);
 console.log(copyright.textContent);
-console.log(skillSection);
+console.log(skillsSection);
 console.log(skillsList);
