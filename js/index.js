@@ -6,24 +6,19 @@ const body = document.body;
 body.append(document.createElement("footer"));
 
 const skills = [
-  "Proficient in I.T. and computer networking",
-  "Advanced electrical knowledge",
-  "Expert abilities in building automation and control system design and engineering",
-  "Superb troubleshooting skills in areas of electrical systems, working, mentation devices, program sequence verification",
-  "Codecademy: p5.js course - completed",
-  "Code the dream - Intro to Programming - in progress",
-];
-
-const conciseSkills = [
   "HTML/CSS/JavaScript",
   "VS Code",
   "Git and GitHub",
+  "Codecademy: p5.js course - completed",
+  "Code the dream - Intro to Programming - in progress",
   "Building Controller Programming",
   "Building Automation",
+  "Program Sequence Verification",
   "Control System Design and Engineering",
   "I.T Support",
   "Computer Networking",
   "Electrical Control Systems",
+  "Instrumentation", 
   "Electrical Troubleshooting",
   "Electrical Theory",
 ];
