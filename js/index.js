@@ -53,31 +53,43 @@ messageForm.addEventListener("submit", (event) => {
   console.log(usersName);
   console.log(usersEmail);
   console.log(usersMessage);
+  const messageSection = document.getElementById("messages");
+  const messageList = messageSection.querySelector("ul");
+  const newMessage = document.createElement("li");
+  newMessage.innerHTML = "<a href=mailto: ddelsid08@gmail.com>Hello</a><span>" + usersMessage + "</span>";
+  const removeButton = document.createElement("button");
+  removeButton.innerText = "remove";
+  removeButton.setAttribute("type", "button");
+  removeButton.addEventListener("click", (event) => {
+    const entry = event.target.parentNode;
+    entry.remove();
+  });
+  newMessage.append(removeButton);
+  messageList.append(newMessage);
+  // body.append(newMessage);
+  console.log("innerHTML", newMessage.innerHTML);
+  console.log(newMessage);
   event.target.reset();
 });
 
-/*  Handle Message Form Submit
+/*  Display Messages in List
 
-  + Open your index.js file and start at the bottom
-  + Create a variable named messageForm that uses "DOM Selection" to select the "leave_message" form by name attribute
-  + Add an event listener to the messageForm element that handles the "submit" event
-     hint: addEventListener method
-  + Inside the callback function for your event listener, create three new variables (one for each of the three form fields) and retrieve the value from the event
-    hint: event.target is the form, event.target.usersName is the first input element
-  + Inside the callback function for your event listener, add a console.log statement to log the three variables you created in the previous step
-  + Save and refresh your browser (or just check your browser for changes if using live extension)
-  + Open the console in your browser if you haven't already by either right clicking on your page and select "Inspect" or by using the menu bar to open the Developer tools.
-  + Fill out the HTML form in your browser and hit "Submit"
-  + Note: at this point, you should notice that the browser is refreshing automatically when you submit your form which is not the desired behavior
-  + Inside the callback function, above the other code you just wrote, add a new line to prevent the default refreshing behavior of the "submit" event
-    hint: preventDefault method
-  + Save and refresh your browser (or just check your browser for changes if using live extension)
-  + Fill out the HTML form in your browser and hit "Submit"
-    + You should see that the page does not refresh and your values are logged in the console
-    Note: at this point, you should notice that the form is submitting properly but the form fields are not reset after submit
-
-  + Inside the callback function, on the very last line, add a new line of code to clear the form
-    hint: reset method
+  + In the index.js file, start inside the event listener callback function on the line above where you reset the form
+  + Create a variable named messageSection and use "DOM Selection" to select the #messages section by id
+  + Create a variable named messageList and use "DOM Selection" to query the messageSection (instead of the entire document) to find the <ul> element
+  + Create a variable named newMessage that makes a new list item (li) element
+  + On the next line, set the inner HTML of your newMessage element with the following information:
+    + <a> element that displays the "usersName" and is a clickable link to the "usersEmail" (hint: use the mailto: prefix)
+    + <span> element that displays the "usersMessage"
+  + Create a variable named removeButton that makes a new <button> element
+    + Set the inner text to "remove"
+    + Set the type attribute to "button"
+    + Add an event listener to the removeButton element that handles the "click" event
+      + Inside the callback function, create a variable named entry that finds the button's parent element using DOM Traversal (hint: parentNode property)
+      + Remove the entry element from the DOM (hint: remove method)
+  + Append the removeButton to the newMessage element
+    + hint: appendChild method
+  + Append the newMessage to the messageList element
   + Save and refresh your browser (or just check your browser for changes if using live extension)
  
  */
