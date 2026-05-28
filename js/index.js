@@ -63,33 +63,27 @@ messageForm.addEventListener("submit", (event) => {
   removeButton.addEventListener("click", (event) => {
     const entry = event.target.parentNode;
     entry.remove();
+    const messageLi = messageSection.querySelector("li");
+    if (messageLi == null) {
+      messageSection.style.display = "none";
+    }
   });
+
   newMessage.append(removeButton);
   messageList.append(newMessage);
   // body.append(newMessage);
   console.log("innerHTML", newMessage.innerHTML);
   console.log(newMessage);
   event.target.reset();
+  const messageLi = messageSection.querySelector("li");
+  if (messageLi != null) {
+    messageSection.style.display = "block";
+  }
 });
-
-/*  Display Messages in List
-
-  + In the index.js file, start inside the event listener callback function on the line above where you reset the form
-  + Create a variable named messageSection and use "DOM Selection" to select the #messages section by id
-  + Create a variable named messageList and use "DOM Selection" to query the messageSection (instead of the entire document) to find the <ul> element
-  + Create a variable named newMessage that makes a new list item (li) element
-  + On the next line, set the inner HTML of your newMessage element with the following information:
-    + <a> element that displays the "usersName" and is a clickable link to the "usersEmail" (hint: use the mailto: prefix)
-    + <span> element that displays the "usersMessage"
-  + Create a variable named removeButton that makes a new <button> element
-    + Set the inner text to "remove"
-    + Set the type attribute to "button"
-    + Add an event listener to the removeButton element that handles the "click" event
-      + Inside the callback function, create a variable named entry that finds the button's parent element using DOM Traversal (hint: parentNode property)
-      + Remove the entry element from the DOM (hint: remove method)
-  + Append the removeButton to the newMessage element
-    + hint: appendChild method
-  + Append the newMessage to the messageList element
-  + Save and refresh your browser (or just check your browser for changes if using live extension)
- 
- */
+const messageLi = document.querySelector("#messages ul");
+const mesSection = document.querySelector("#messages");
+if (messageLi.children.length === 0) {
+  mesSection.style.display = "none";
+} else {
+  mesSection.style.display = "block";
+}
