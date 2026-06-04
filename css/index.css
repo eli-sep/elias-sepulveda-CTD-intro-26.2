@@ -125,6 +125,7 @@ h3 {
   background-color: rgb(0, 82, 170);
   padding: 15px 0;
   margin: 0;
+  align-items: center;
 }
 
 #skills li {
@@ -204,4 +205,37 @@ button {
   width: 90px;
   height: 40px;
   font-size: 16px;
+}
+
+#Projects ul {
+  border-color: rgb(249, 207, 67);
+  border-style: ridge;
+  border-width: 9px;
+  border-radius: 30px;
+  background-color: rgb(1, 4, 71);
+  color: #000b7d;
+  display: flex; 
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px;
+  align-items: center;
+}
+
+#Projects li {
+  color: #32ff6f;
+  font-size: 1.1;
+  font-weight: 600;
+  width: 33%;
+  margin: 5px 0;
+  text-align: center;
+}
+
+#Projects p {
+  font-weight: 600;
+  font-size: 1.1em;
+  background-color: rgb(59, 55, 55);
+  margin-right: 0 auto;
+  padding: 2px 12px;
+  width: 540px;
+  text-align: center;
 }
