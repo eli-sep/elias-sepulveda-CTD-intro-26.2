@@ -93,9 +93,9 @@ const projectList = projectsSection.querySelector("ul");
 fetch("https://api.github.com/users/eli-sep/repos")
   .then((response) => {
     console.log(response);
-    // if (!response.ok) {
-    //   throw new Error(response.status + " - Projects section is empty. Sorry come back again later.");
-    // }
+    if (!response.ok) {
+      throw new Error(response.status + " - Projects section is empty. Sorry come back again later.");
+    }
     return response.json();
   })
 
