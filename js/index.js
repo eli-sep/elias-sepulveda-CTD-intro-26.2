@@ -103,7 +103,7 @@ fetch("https://api.github.com/users/eli-sep/repos")
     for (let i = 0; i < repositories.length; i++) {
       const project = document.createElement("li");
       project.innerText = repositories[i].name;
-      projectList.append(project);
+      projectList.appendChild(project);
     }
 
     console.log(repositories);
@@ -113,8 +113,8 @@ fetch("https://api.github.com/users/eli-sep/repos")
     console.error("error: " + error);
     const errorMessage = document.createElement("p");
     errorMessage.innerText = error;
-    projectList.remove();
-    projectsSection.append(errorMessage);
+    projectList.remove(); //removes ul to remove border and background
+    projectsSection.appendChild(errorMessage);
   });
 
 console.log(projectsSection);
