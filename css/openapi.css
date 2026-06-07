@@ -1,0 +1,49 @@
+@font-face {
+    font-family: avengeanceheroicavenger;
+    src: url("../fonts/AVENGEANCE/AVENGEANCE\ HEROIC\ AVENGER.ttf");
+}
+
+/* html {
+    background-color: black;
+} */
+
+body {
+  margin: 0;
+  padding: 0 50px;
+  background-color: rgb(21, 18, 18);
+}
+
+header {
+  font-family: Avengeance;
+  /* font-size: 2em; */
+  text-align: center;
+  background-color: blue;
+  padding: 10px 0;
+}
+
+h1 {
+  font-size: 100px;
+  font-weight: lighter;
+  color: gold;
+  -webkit-text-stroke: 2px red;
+}
+
+#character-container {
+  background-color: black;
+  display: flex;
+  flex: 1 1 50%;
+}
+
+#marvel-title {
+  color: red;
+  text-align: center;
+  width: 50%;
+  font-size: 40px;
+}
+
+#dc-title {
+  color: gold;
+  text-align: center;
+  width: 50%;
+  font-size: 40px;
+}
