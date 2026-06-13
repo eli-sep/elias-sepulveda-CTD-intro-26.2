@@ -6,30 +6,34 @@
     <title>SuperHero</title>
     <link rel="stylesheet" href="css/openapi.css" />
     <link href="https://db.onlinewebfonts.com/c/2dee406dad27473484ad853f316b5e82?family=Avengeance" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" />
   </head>
   <body>
     <header>
       <h1>Comic API</h1>
+      <nav><div><a href="index.html">Home</a><div></nav>
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#Experience">Experience</a></li>
-          <li><a href="#Projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#Connect">Connect</a></li>
-          <li><a href="#Message">Leave a message</a></li>
+          <li class="marvel-style" id="spider-man"><a>Spider-Man</a></li>
+          <li class="marvel-style" id="black-widow"><a>Black Widow</a></li>
+          <li class="marvel-style" id="star-lord"><a>Star-Lord</a></li>
+          <li class="dc-style" id="batman"><a>Batman</a></li>
+          <li class="dc-style" id="wonder-woman"><a>Wonder Woman</a></li>
+          <li class="dc-style" id="the-flash"><a>The Flash</a></li>
+          <!-- <li><a href="index.html">Home</a></li> -->
         </ul>
       </nav>
     </header>
     <section id="character-container">
-      <h2 id="marvel-title">object.name</h2>
-      <ul id="char-card">
-        <img src="https://comicvine.gamespot.com/a/uploads/scale_medium/12/124259/8126579-amazing_spider-man_vol_5_54_stormbreakers_variant_textless.jpg">  //(object).image.medium_url
-        <p class="char-name">Real Name: </p>
-        <p class="char-birth">Birthdate: object.birth</p>
-        <p class="char-deck">Bio: object.deck j f a ;lsdsd fanknc oikjfa</p>
-        <p class="char-powers">Powers j f a ;lsdsd fanknc oikjfa</p>
-
+      <h2 class="marvel-style" id="marvel-title">object.name</h2>
+      <div id="char-card">
+        <img class="char-image" />
+        <p class="char-name"><strong>Real Name: </strong></p>
+        <p class="char-birth"><strong>Birthdate: </strong></p>
+        <p class="char-bio"><strong>Bio: </strong></p>
+        <p class="char-powers"><strong>Powers: </strong></p>
       </div>
       <!-- <ul id="marvel-chars"></ul>
       <ul id="dc-chars"></ul> -->
@@ -37,7 +41,6 @@
     <script src="js/openapi.js"></script>
   </body>
 </html>
-
 
 <!-- 
 
@@ -73,5 +76,3 @@ deck: "bio"
 
 
  -->
-
- 

@@ -13,10 +13,6 @@
   src: url("../fonts/DCFandom/DCFandom.ttf");
 }
 
-/* html {
-    background-color: black;
-} */
-
 body {
   margin: 0;
   padding: 0 50px;
@@ -44,26 +40,49 @@ li {
 
 nav {
   padding: 10px;
-  background-color: rgb(58, 114, 245);
+  background-color: white;
 }
 
 nav ul {
   margin: 0 auto;
   padding: 0px;
-  /* text-align: center; */
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
+  width: 600px;
 }
 
 nav li {
+  flex: 0 1 auto;
   margin: 5px;
   /* display: inline-block; */
   font-weight: 700;
   font-size: 24px;
   background-color: rgb(17, 2, 180);
+  align-self: center;
+  
   /* padding: 5px 15px; */
 }
+
+nav div {
+  flex: 0 1 auto;
+  margin: 5px auto;
+  /* display: inline-block; */
+  width: fit-content;
+  font-weight: 700;
+  font-size: 24px;
+  background-color: rgb(17, 2, 180);
+  align-self: center;
+}
+
+/* nav li {
+  display: block;
+   margin: 5px;
+  padding: 5px 15px;
+  text-decoration: none;
+  color: rgb(255, 213, 0);
+  border: 4px rgb(246, 192, 56) outset;
+} */
 
 nav a {
   display: block;
@@ -72,6 +91,7 @@ nav a {
   text-decoration: none;
   color: rgb(255, 213, 0);
   border: 4px rgb(246, 192, 56) outset;
+  width: fit-content;
 }
 
 nav a:hover {
@@ -106,6 +126,7 @@ h2 {
   color: red;
   /* text-align: center;  */
   font-size: 75px;
+  letter-spacing: 2px;
 }
 
 #dc-title {
@@ -118,11 +139,13 @@ h2 {
 
 #char-card {
   margin: 40px auto;
-  color: red;
+  font-family: "Comic Neue";
+  font-size: 17px;
+  color: white;
   display: flex;
-  height: 350px;
+  height: 500px;
   justify-content: center;
-  align-content: space-between;
+  /* align-content: space-between; */
   flex-flow: column wrap;
   column-gap: 20px;
   row-gap: 10px;
@@ -134,4 +157,5 @@ h2 {
 
 #char-card p{
   margin: 0;
+  width: 300px;
 }
