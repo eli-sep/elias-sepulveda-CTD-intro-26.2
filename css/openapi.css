@@ -1,6 +1,16 @@
 @font-face {
-    font-family: avengeanceheroicavenger;
-    src: url("../fonts/AVENGEANCE/AVENGEANCE\ HEROIC\ AVENGER.ttf");
+  font-family: "avengeanceheroicavenger";
+  src: url("../fonts/AVENGEANCE/AVENGEANCE\ HEROIC\ AVENGER.ttf");
+}
+
+@font-face {
+  font-family: "Marvel";
+  src: url("../fonts/Marvel/Marvel-Regular.ttf");
+}
+
+@font-face {
+  font-family: "DCFandom";
+  src: url("../fonts/DCFandom/DCFandom.ttf");
 }
 
 /* html {
@@ -14,36 +24,114 @@ body {
 }
 
 header {
-  font-family: Avengeance;
   /* font-size: 2em; */
   text-align: center;
   background-color: blue;
-  padding: 10px 0;
+  padding: 10px 0 0 0;
 }
 
 h1 {
+  font-family: "avengeanceheroicavenger";
   font-size: 100px;
   font-weight: lighter;
   color: gold;
   -webkit-text-stroke: 2px red;
 }
 
-#character-container {
+li {
+  list-style: none;
+}
+
+nav {
+  padding: 10px;
+  background-color: rgb(58, 114, 245);
+}
+
+nav ul {
+  margin: 0 auto;
+  padding: 0px;
+  /* text-align: center; */
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav li {
+  margin: 5px;
+  /* display: inline-block; */
+  font-weight: 700;
+  font-size: 24px;
+  background-color: rgb(17, 2, 180);
+  /* padding: 5px 15px; */
+}
+
+nav a {
+  display: block;
+  margin: 0px;
+  padding: 5px 15px;
+  text-decoration: none;
+  color: rgb(255, 213, 0);
+  border: 4px rgb(246, 192, 56) outset;
+}
+
+nav a:hover {
+  border-style: inset;
+}
+
+a {
+  margin: 5px 15px;
+  text-decoration: none;
+}
+
+section {
   background-color: black;
   display: flex;
+  flex-wrap: wrap;
+  /* align-items: center; */
   flex: 1 1 50%;
+  padding: 10px 0 0;
+}
+
+h2 {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
 }
 
 #marvel-title {
+  font-family: "Marvel";
   color: red;
-  text-align: center;
-  width: 50%;
-  font-size: 40px;
+  /* text-align: center;  */
+  font-size: 75px;
 }
 
 #dc-title {
-  color: gold;
-  text-align: center;
-  width: 50%;
-  font-size: 40px;
+  font-family: "DCFandom";
+  color:  gold;
+  /* text-align: center; */
+  /* width: 50%; */
+  font-size: 60px;
+}
+
+#char-card {
+  margin: 40px auto;
+  color: red;
+  display: flex;
+  height: 350px;
+  justify-content: center;
+  align-content: space-between;
+  flex-flow: column wrap;
+  column-gap: 20px;
+  row-gap: 10px;
+}
+
+#char-card img{
+  height: 100%;
+}
+
+#char-card p{
+  margin: 0;
 }
