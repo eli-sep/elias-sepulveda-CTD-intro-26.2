@@ -75,15 +75,6 @@ nav div {
   align-self: center;
 }
 
-/* nav li {
-  display: block;
-   margin: 5px;
-  padding: 5px 15px;
-  text-decoration: none;
-  color: rgb(255, 213, 0);
-  border: 4px rgb(246, 192, 56) outset;
-} */
-
 nav a {
   display: block;
   margin: 0px;
@@ -121,6 +112,38 @@ h2 {
   align-items: center;
 }
 
+#char-nav{
+  background-color: rgb(29, 29, 29);
+  font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
+}
+
+.marvel-style{
+  background-color: rgb(0, 0, 0);
+  display: block;
+  margin: 5px;
+  padding: 5px 15px;
+  text-decoration: none;
+  color: white;
+  border: 3px red outset;
+  width: fit-content;
+}
+
+.dc-style{
+  background-color: white;
+  display: block;
+  margin: 5px;
+  padding: 5px 15px;
+  text-decoration: none;
+  color: #027DBF;
+  border: 5px #027DBF outset;
+  width: fit-content;
+}
+
+.char-name {
+  color: white;
+  /* font-size: 30px; */
+}
+
 #marvel-title {
   font-family: "Marvel";
   color: red;
@@ -132,27 +155,30 @@ h2 {
 #dc-title {
   font-family: "DCFandom";
   color:  gold;
-  /* text-align: center; */
-  /* width: 50%; */
   font-size: 60px;
 }
 
 #char-card {
-  margin: 40px auto;
+  margin: 50px auto;
   font-family: "Comic Neue";
   font-size: 17px;
   color: white;
   display: flex;
-  height: 500px;
+  height: 600px;
   justify-content: center;
-  /* align-content: space-between; */
   flex-flow: column wrap;
   column-gap: 20px;
   row-gap: 10px;
 }
 
+#img-container{
+  margin: 50px 0;
+  align-self: center;
+}
+
 #char-card img{
-  height: 100%;
+  display: block;
+  height: 500px;
 }
 
 #char-card p{

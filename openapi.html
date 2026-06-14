@@ -14,23 +14,23 @@
     <header>
       <h1>Comic API</h1>
       <nav><div><a href="index.html">Home</a><div></nav>
-      <nav>
+      <nav id="char-nav">
         <ul>
-          <li class="marvel-style" id="spider-man"><a>Spider-Man</a></li>
-          <li class="marvel-style" id="black-widow"><a>Black Widow</a></li>
-          <li class="marvel-style" id="star-lord"><a>Star-Lord</a></li>
-          <li class="dc-style" id="batman"><a>Batman</a></li>
-          <li class="dc-style" id="wonder-woman"><a>Wonder Woman</a></li>
-          <li class="dc-style" id="the-flash"><a>The Flash</a></li>
+          <li class="marvel-style" id="spider-man">Spider-Man</li>
+          <li class="marvel-style" id="black-widow">Black Widow</li>
+          <li class="marvel-style" id="star-lord">Star-Lord</li>
+          <li class="dc-style" id="batman">Batman</li>
+          <li class="dc-style" id="wonder-woman">Wonder Woman</li>
+          <li class="dc-style" id="superman">Superman</li>
           <!-- <li><a href="index.html">Home</a></li> -->
         </ul>
       </nav>
     </header>
     <section id="character-container">
-      <h2 class="marvel-style" id="marvel-title">object.name</h2>
+      <h2 class="char-name">Select a Superhero</h2>
       <div id="char-card">
-        <img class="char-image" />
-        <p class="char-name"><strong>Real Name: </strong></p>
+        <div id="img-container"><img class="char-image" /></div>
+        <p class="char-real-name"><strong>Real Name: </strong></p>
         <p class="char-birth"><strong>Birthdate: </strong></p>
         <p class="char-bio"><strong>Bio: </strong></p>
         <p class="char-powers"><strong>Powers: </strong></p>
@@ -41,38 +41,3 @@
     <script src="js/openapi.js"></script>
   </body>
 </html>
-
-<!-- 
-
-name
-: 
-"Spider-Man"
-origin
-: 
-{api_detail_url: 'https://comicvine.gamespot.com/api/origin/4030-4/', id: 4, name: 'Human'}
-powers
-: 
-(13) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
-publisher
-: 
-{api_detail_url: 'https://comicvine.gamespot.com/api/publisher/4010-31/', id: 31, name: 'Marvel'}
-real_name
-
-aliases
-: 
-"Peter Parker\nCaptain Universe\nDusk\nHornet\nProdigy\nRicochet\nBombastic Bag-Man\nPoison\nPestilence\nSpidey\nWallcrawler\nWebslinger\nWeb-Head\nYour Friendly Neighborhood Spider-Man\nSpider-Kid\nThe Human Spider\nPeter Benjamin Parker\nPter Ptarker\nSpider-Monkey\nWild Card\nPeter Parquagh\nSpider"
-
-
-https://comicvine.gamespot.com/api/origin/4030-4/', id: 4, name: 'Human'}
-powers
-: 
-(13) [{…}, {…}, {…
-
-
-
-
-
-deck: "bio"
-
-
- -->
