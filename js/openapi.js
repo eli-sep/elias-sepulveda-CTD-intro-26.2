@@ -44,6 +44,7 @@ function domRender(data, style, err = 0) {
 
     //DOM maniplation
     charImage.src = image;
+    charImage.alt = `Comic image of ${name}`;
     charName.innerText = name;
     charName.id = style;
     charRealName.innerHTML = `<strong>Real Name: </strong>${realName}`;
@@ -86,7 +87,6 @@ const blackWidow = document.querySelector("#black-widow");
 const starLord = document.querySelector("#star-lord");
 const batman = document.querySelector("#batman");
 const wonderWoman = document.querySelector("#wonder-woman");
-const theFlash = document.querySelector("#the-flash");
 const superman = document.querySelector("#superman");
 
 spiderMan.addEventListener("click", (event) => {
