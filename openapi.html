@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SuperHero</title>
+    <link rel="stylesheet" href="css/openapi.css" />
+    <link href="https://db.onlinewebfonts.com/c/2dee406dad27473484ad853f316b5e82?family=Avengeance" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <h1>Comic API</h1>
+      <nav><div><a href="index.html">Home</a></div></nav>
+      <nav id="char-nav">
+        <ul>
+          <li class="marvel-style" id="spider-man">Spider-Man</li>
+          <li class="marvel-style" id="black-widow">Black Widow</li>
+          <li class="marvel-style" id="star-lord">Star-Lord</li>
+          <li class="dc-style" id="batman">Batman</li>
+          <li class="dc-style" id="wonder-woman">Wonder Woman</li>
+          <li class="dc-style" id="superman">Superman</li>
+          <!-- <li><a href="index.html">Home</a></li> -->
+        </ul>
+      </nav>
+    </header>
+    <section id="character-container">
+      <h2 class="char-name">Select a Superhero</h2>
+      <div id="char-card">
+        <div id="img-container"><img class="char-image" /></div>
+        <p class="char-real-name"><strong>Real Name: </strong></p>
+        <p class="char-birth"><strong>Birthdate: </strong></p>
+        <p class="char-bio"><strong>Bio: </strong></p>
+        <p class="char-powers"><strong>Powers: </strong></p>
+      </div>
+      <!-- <ul id="marvel-chars"></ul>
+      <ul id="dc-chars"></ul> -->
+    </section>
+    <script src="js/openapi.js"></script>
+  </body>
+</html>
