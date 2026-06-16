@@ -54,3 +54,36 @@ https://eli-sep.github.io/elias-sepulveda-CTD-intro-26.2/
 Repository
 
 https://github.com/eli-sep/elias-sepulveda-CTD-intro-26.2/
+
+## Comic API Webpage
+
+The Comic API Webpage is an interactive superhero character page that uses the Comic Vine API to display information about selected Marvel and DC characters.
+
+Users can select a superhero from the navigation menu, and the page will update with that character's:
+
+Image
+Real name
+Birthdate
+Short biography
+Powers and abilities
+
+### How to Use the Comic API Page
+
+Open openapi.html.
+Click one of the superhero names in the navigation menu.
+The character card will update with information from the Comic Vine API.
+
+### CORS Notice
+
+This project uses CORS Anywhere to help make requests to the Comic Vine API from the browser.
+
+If the request is blocked, the page will display a link that says:
+
+Click here to enable CORS.
+
+To continue using the page:
+
+Click the CORS link shown on the page.
+Follow the prompt to temporarily enable access.
+Return to the Comic API page.
+Click a superhero name again.
