@@ -1,9 +1,9 @@
+/* ---- General Styling ---- */
 body {
   margin: 0;
   background-color: rgb(151, 226, 255);
   font-family: "Nunito", sans-serif;
   color: rgb(2, 112, 149);
-  /* border: 10px rgb(255, 213, 0) solid; */
 }
 
 header {
@@ -13,7 +13,48 @@ header {
   top: 0px;
   overflow: auto;
 }
+a {
+  margin: 5px 15px;
+  text-decoration: none;
+}
 
+p {
+  color: white;
+}
+
+h1 {
+  width: 375px;
+  font-family: "Original Surfer", sans-serif;
+  font-size: 48px;
+  text-align: center;
+  margin: 30px auto;
+  padding: 5px 0;
+  border: 5px rgb(255, 213, 0) solid;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 550;
+  color: rgb(226, 67, 39);
+  margin-top: 0;
+}
+
+h3 {
+  width: 400px;
+}
+
+section {
+  margin: 0px auto;
+  padding: 40px 11.5%;
+  scroll-margin-top: 221px;
+}
+
+li {
+  margin: 0 15px;
+  list-style: none;
+}
+
+/* ---- Nav Styling ---- */
 nav {
   padding: 10px;
   background-color: rgb(58, 114, 245);
@@ -50,47 +91,17 @@ nav a:hover {
   border-style: inset;
 }
 
-a {
-  margin: 5px 15px;
-  text-decoration: none;
-}
-
-p {
-  color: white;
-}
-
-h1 {
-  width: 375px;
-  font-family: "Original Surfer", sans-serif;
-  font-size: 48px;
-  text-align: center;
-  margin: 30px auto;
-  padding: 5px 0;
-  border: 5px rgb(255, 213, 0) solid;
-}
-
-section {
-  margin: 0px auto;
-  padding: 40px 11.5%;
-  scroll-margin-top: 221px;
-}
-
+/* ---- About section Styling ---- */
 #About {
   text-align: center;
   background-color: #59c3c3;
 }
 
-h2 {
-  font-size: 30px;
-  font-weight: 550;
-  color: rgb(226, 67, 39);
-  margin-top: 0;
+#About p {
+  text-align: left;
 }
 
-h3 {
-  width: 400px;
-}
-
+/* ---- Experience section Styling ---- */
 #Experience {
   background-color: whitesmoke;
 }
@@ -118,6 +129,7 @@ h3 {
   justify-content: space-between;
 }
 
+/* ---- Skills section Styling ---- */
 #skills ul {
   display: flex;
   flex-wrap: wrap;
@@ -137,11 +149,7 @@ h3 {
   margin: 5px 0;
 }
 
-li {
-  margin: 0 15px;
-  list-style: none;
-}
-
+/* ---- Connect section Styling ---- */
 #Connect {
   margin: 0 auto;
   text-align: center;
@@ -160,15 +168,11 @@ li {
   color: rgb(0, 122, 98);
 }
 
-.fa-github {
+.fa-3x {
   color: rgb(0, 122, 98);
 }
 
-.devicon-android-plain {
-  font-size: 50px;
-  color: rgb(0, 122, 98);
-}
-
+/* ---- Messages section Styling ---- */
 input {
   margin: 0 0 20px 0;
 }
@@ -207,6 +211,7 @@ button {
   font-size: 16px;
 }
 
+/* ---- Projects section Styling ---- */
 #Projects ul {
   border-color: rgb(249, 207, 67);
   border-style: ridge;

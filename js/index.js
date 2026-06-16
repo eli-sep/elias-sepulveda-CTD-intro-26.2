@@ -1,10 +1,16 @@
+//Write date and copyright in footer of page
 const today = new Date();
 const thisYear = today.getFullYear();
 const copyright = document.createElement("p");
 const body = document.body;
 
 body.append(document.createElement("footer"));
+const footer = document.querySelector("footer");
+copyright.innerHTML = `\u00A9 Elias Sepulveda ${thisYear}`;
+footer.appendChild(copyright);
+copyright.style.textAlign = "center"; // center copyright
 
+//Skill to populate skills section
 const skills = [
   "HTML/CSS/JavaScript",
   "VS Code",
@@ -26,24 +32,13 @@ const skills = [
 const skillsSection = document.querySelector("#skills");
 const skillsList = skillsSection.querySelector("ul");
 
-copyright.innerHTML = `\u00A9 Elias Sepulveda ${thisYear}`;
-
 for (let i = 0; i < skills.length; i++) {
   const skill = document.createElement("li");
   skill.innerText = skills[i];
   skillsList.appendChild(skill);
 }
-const footer = document.querySelector("footer");
 
-footer.appendChild(copyright);
-copyright.style.textAlign = "center"; // center copyright
-
-console.log(today);
-console.log(thisYear);
-console.log(copyright.textContent);
-console.log(skillsSection);
-console.log(skillsList);
-
+//Message board: Allows user to input user name, email address, and a message
 const messageForm = document.querySelector("form[name='leave_message']");
 messageForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -71,9 +66,6 @@ messageForm.addEventListener("submit", (event) => {
 
   newMessage.append(removeButton);
   messageList.append(newMessage);
-  // body.append(newMessage);
-  console.log("innerHTML", newMessage.innerHTML);
-  console.log(newMessage);
   event.target.reset();
   const messageLi = messageSection.querySelector("li");
   if (messageLi != null) {
@@ -87,6 +79,8 @@ if (messageLi.children.length === 0) {
 } else {
   mesSection.style.display = "block";
 }
+
+//Project section: Used api call to Github to get a list of repositories
 const projectsSection = document.getElementById("Projects");
 const projectList = projectsSection.querySelector("ul");
 
@@ -116,6 +110,3 @@ fetch("https://api.github.com/users/eli-sep/repos")
     projectList.remove(); //removes ul to remove border and background
     projectsSection.appendChild(errorMessage);
   });
-
-console.log(projectsSection);
-console.log(projectList);
