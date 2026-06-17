@@ -20,7 +20,6 @@ body {
 }
 
 header {
-  /* font-size: 2em; */
   text-align: center;
   background-color: blue;
   padding: 10px 0 0 0;
@@ -55,19 +54,15 @@ nav ul {
 nav li {
   flex: 0 1 auto;
   margin: 5px;
-  /* display: inline-block; */
   font-weight: 700;
   font-size: 24px;
   background-color: rgb(17, 2, 180);
   align-self: center;
-  
-  /* padding: 5px 15px; */
 }
 
 nav div {
   flex: 0 1 auto;
   margin: 5px auto;
-  /* display: inline-block; */
   width: fit-content;
   font-weight: 700;
   font-size: 24px;
@@ -98,7 +93,6 @@ section {
   background-color: black;
   display: flex;
   flex-wrap: wrap;
-  /* align-items: center; */
   flex: 1 1 50%;
   padding: 10px 0 0;
 }
@@ -141,13 +135,11 @@ h2 {
 
 .char-name {
   color: white;
-  /* font-size: 30px; */
 }
 
 #marvel-title {
   font-family: "Marvel";
   color: red;
-  /* text-align: center;  */
   font-size: 75px;
   letter-spacing: 2px;
 }
